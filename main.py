@@ -32,7 +32,7 @@ def app():
         }
         
         # 特定のURLにPOSTリクエストを送信
-        url = os.getenv('POSTURL')
+        url = st.secrets["POSTURL"]
         
         try:
             response = requests.post(url, json=data)
